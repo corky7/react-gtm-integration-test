@@ -36,10 +36,14 @@
 		</script>		
 		
 		<script>
-		dataLayer.push({
-		'event': 'UAevent',
-		'action': 'second-event'
-		});	
+		function pushSecondEvent(){
+			dataLayer.push({
+			'event': 'UAevent',
+			'action': 'second-event'
+			})
+		};	
 		</script>		
+		
+		<input type="button" onclick="pushSecondEvent()" value="push second event">
     </body>
 </html>
