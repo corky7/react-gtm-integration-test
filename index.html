@@ -26,9 +26,10 @@
 		<!-- End Google Tag Manager (noscript) -->
 		
 		<script>
-		let iframeWindow = document.getElementsByTagName('iframe')[0].contentWindow;
+		console.log(document.getElementsByTagName('iframe');
+		//let iframeWindow = document.getElementsByTagName('iframe')[0].contentWindow;
 		
-		iframeWindow.dataLayer.push({
+		dataLayer.push({
 		'event': 'UAevent',
 		'action': 'first-open'
 		});	
@@ -36,7 +37,7 @@
 		
 		<script>
 		function pushSecondEvent(){
-			iframeWindow.dataLayer.push({
+			dataLayer.push({
 			'event': 'UAevent',
 			'action': 'second-event'
 			})
