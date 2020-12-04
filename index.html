@@ -26,7 +26,11 @@
 		<!-- End Google Tag Manager (noscript) -->
 		
 		<script>
-		dataLayer.push({
+		let iframeWindow = iframe.contentWindow;
+		</script>
+		
+		<script>
+		iframeWindow.dataLayer.push({
 		'event': 'UAevent',
 		'action': 'first-open'
 		});	
@@ -34,7 +38,7 @@
 		
 		<script>
 		function pushSecondEvent(){
-			dataLayer.push({
+			iframeWindow.dataLayer.push({
 			'event': 'UAevent',
 			'action': 'second-event'
 			})
