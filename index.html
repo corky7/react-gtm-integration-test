@@ -29,19 +29,35 @@
     <p>HTML5 Starter Template</p>
 
     <script>
-      function pushSecondEvent() {
-        // dataLayer.push({ event: "UAevent", action: "second-event" });
+      function pushThirdEvent() {
+
         gtag("event", "UAevent", {
           action: "second-event",
         });
         console.log(dataLayer);
       }
+
+	  function pushSecondEvent() {
+		dataLayer.push({ event: "UAevent", action: "second-event" });
+
+        gtag("event", "UAevent", {
+          action: "second-event",
+        });
+        console.log(dataLayer);
+      }
+	  
     </script>
 
     <input
       type="button"
       onclick="pushSecondEvent()"
-      value="push second event"
-    />
+      value="До проблем с кукиз, через action"
+	/>
+	
+	<input
+	type="button"
+	onclick="pushThirdEvent()"
+	value="Кукиз + Категория"
+  />
   </body>
 </html>
