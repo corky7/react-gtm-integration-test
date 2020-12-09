@@ -39,13 +39,11 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <script>
+      window.gDataLayer = window.gDataLayer || [];
       function gtag() {
-        dataLayer.push(arguments);
+        gDataLayer.push(arguments);
       }
-    //   gtag({
-    //     event: "UAevent",
-    //     action: "first-open",
-    //   });
+      gtag("js", new Date());
 
       gtag("config", "GTM-KFKX97Q", {
         client_storage: "none",
@@ -57,6 +55,12 @@
         //   event: "UAevent",
         //   action: "second-event",
         // });
+		gtag("config", "GTM-KFKX97Q", {
+        client_storage: "none",
+        client_id: 1,
+		event: "UAevent",
+		action: "second-event",
+      });
         console.log("Button pushed");
         console.log(dataLayer);
       }
