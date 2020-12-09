@@ -39,31 +39,31 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
 
-      gtag("config", "GTM-KFKX97Q", {
-        client_storage: "none",
-        client_id: 1,
-      });
+          gtag("config", "GTM-KFKX97Q", {
+            client_storage: "none",
+            client_id: 1,
+          });
 
-      function pushSecondEvent() {
-        gtag({
-          event: "UAevent",
-          action: "second-event",
-        });
-		// gtag("config", "GTM-KFKX97Q", {
-        // client_storage: "none",
-        // client_id: 1,
-		// event: "UAevent",
-		// action: "second-event",
-      });
-        console.log("Button pushed");
-        console.log(dataLayer);
-      }
+          function pushSecondEvent() {
+            gtag({
+              event: "UAevent",
+              action: "second-event",
+            });
+      // gtag("config", "GTM-KFKX97Q", {
+            // client_storage: "none",
+            // client_id: 1,
+      // event: "UAevent",
+      // action: "second-event",
+        //   });
+            console.log("Button pushed");
+            console.log(dataLayer);
+          }
     </script>
 
     <input
