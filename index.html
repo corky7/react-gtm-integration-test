@@ -1,63 +1,71 @@
 <!DOCTYPE html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width" />
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-		
-		<!-- Google Tag Manager -->
-		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-KFKX97Q');</script>
-		<!-- End Google Tag Manager -->				
-    </head>
-    <body>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <!-- Add your site or application content here -->
-        <p>HTML5 Starter Template</p>
-		<!-- Google Tag Manager (noscript) -->
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFKX97Q"
-		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-		<!-- End Google Tag Manager (noscript) -->
-		
-		<script>
-		
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag({
-			'event': 'UAevent',
-			'action': 'first-open'
-		});
-		
-		gtag('config', 'GA_MEASUREMENT_ID', {
-			client_storage: 'none',
-			client_id: 1,
-		});
-		//dataLayer.push({
-		//	'event': 'UAevent',
-		//	'action': 'first-open'
-		//});	
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-KFKX97Q");
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <!-- Add your site or application content here -->
+    <p>HTML5 Starter Template</p>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-KFKX97Q"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
-		function pushSecondEvent(){
-			//dataLayer.push({
-			//'event': 'UAevent',
-			//'action': 'second-event'
-			//})
-			gtag({
-			'event': 'UAevent',
-			'action': 'second-event'
-			});
-			console.log('Button pushed');
-			console.log(dataLayer);
-		};	
-		</script>		
-		
-		<input type="button" onclick="pushSecondEvent()" value="push second event">
-    </body>
+    <script>
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+    //   gtag({
+    //     event: "UAevent",
+    //     action: "first-open",
+    //   });
+
+      gtag("config", "GTM-KFKX97Q", {
+        client_storage: "none",
+        client_id: 1,
+      });
+
+      function pushSecondEvent() {
+        // gtag({
+        //   event: "UAevent",
+        //   action: "second-event",
+        // });
+        console.log("Button pushed");
+        console.log(dataLayer);
+      }
+    </script>
+
+    <input
+      type="button"
+      onclick="pushSecondEvent()"
+      value="push second event"
+    />
+  </body>
 </html>
