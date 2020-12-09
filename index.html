@@ -27,10 +27,23 @@
 		
 		<script>
 		
-		dataLayer.push({
-		'event': 'UAevent',
-		'action': 'first-open'
-		});	
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag({
+			'event': 'UAevent',
+			'action': 'first-open'
+		});
+		
+		gtag('config', 'GA_MEASUREMENT_ID', {
+			client_storage: 'none',
+			client_id: 1,
+		});
+		//dataLayer.push({
+		//	'event': 'UAevent',
+		//	'action': 'first-open'
+		//});	
+
 		</script>		
 		
 		<script>
