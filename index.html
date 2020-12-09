@@ -31,8 +31,7 @@
     <script>
       function pushSecondEvent() {
         // dataLayer.push({ event: "UAevent", action: "second-event" });
-        gtag({
-          event: "UAevent",
+        gtag("event", "UAevent", {
           action: "second-event",
         });
         console.log(dataLayer);
