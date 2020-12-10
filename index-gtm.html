@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=GTM-KFKX97Q"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "GTM-KFKX97Q", { client_storage: "none", client_id: 1 });
+    </script>
+  </head>
+  <body>
+    <!-- Add your site or application content here -->
+    <p>HTML5 Starter Template</p>
+
+    <script>
+      function pushThirdEvent() {
+
+        gtag("event", "UAevent", {
+          action: "second-event",
+        });
+        console.log(dataLayer);
+      }
+
+	  function pushSecondEvent() {
+		dataLayer.push({ event: "UAevent", action: "second-event" });
+        console.log(dataLayer);
+      }
+	  
+    </script>
+
+    <input
+      type="button"
+      onclick="pushSecondEvent()"
+      value="До проблем с кукиз, через action"
+	/>
+	
+	<input
+	type="button"
+	onclick="pushThirdEvent()"
+	value="Кукиз решение с action"
+  />
+  </body>
+</html>
